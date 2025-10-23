@@ -1,20 +1,72 @@
-<!DOCTTYPE html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8>
+<head>
     <title>Lista de Usuários</title>
-  </head>
-<body> 
-<h2>Usuários</h2>
-<form method="post" action = "/add">
-    <input type = "text" name = "nome" placeholder = "Nome">
-    <button type = "submit">Adicionar</button>
-</form>
+</head> 
 
-<ul>
-    {% for u in usuarios %}
-    <li>{{u.nome}}</li>
-    {% endfor %}
-</ul>
-</body>    
+<body>
+    <h2>Usuários</h2>
+
+    <form method = "post" action="/add">
+        <input type = "text" name = "nome" placeholder= "Nome">
+        <button type = "submit">Adicionar</button>
+    </form>
+
+    <ul>
+        {% for u in usuarios %}
+        <li>{{u.nome}}</li>
+        {% endfor %}
+    </ul>
+</body>
 </html>
+
+
+
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        background-color: #f7f7f7;
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    form {
+        margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+        padding: 8px;
+        width: 200px;
+        margin-right: 10px;
+    }
+
+    button {
+        padding: 8px 16px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        background: white;
+        padding: 10px;
+        margin-bottom: 8px;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+</style>
